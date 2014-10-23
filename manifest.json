@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Paladin",
+  "description": "Lock row for Office365.",
+  "version": "1.0",
+  "permissions": [
+    "https://dper-my.sharepoint.cn/*",
+    "https://sha-partner.officewebapps.cn/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://dper-my.sharepoint.cn/*", "https://sha-partner.officewebapps.cn/*"],
+      "js": ["jquery.js", "background.js"],
+      "all_frames": true
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
